@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    VOAR
+{% endblock %}
+
+{% block body %}
+    <h1>Lista de VOOs</h1>
+
+    <form action="{{ url_for('deco') }}" method="post">
+
+        <div class="form-group">
+            <select class="form-control" name="flight_id">
+                {% for flight in flights %}
+                    <option value="{{ flight.id }}"> de {{ flight.origin }} para {{ flight.destination }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="name" placeholder="Nome do Passageiro">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary">Decolar</button>
+            
+        </div>
+        <button type="reset" class="btn btn-reset" >Limpar</button>
+			<button  class="btn btn-reset" ><a href="{{ url_for('flights') }}">Detalhes</button></a>
+    </form>
+{% endblock %}
+{% block footer %}
+VooBras: Desde 2023 te levando as alturas
+{% endblock %}

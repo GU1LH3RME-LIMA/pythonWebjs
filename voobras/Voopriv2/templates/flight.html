@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Flight
+{% endblock %}
+
+{% block body %}
+    <h1>Detalhes do Voo</h1>
+
+    <ul>
+        <li>De: {{ flight.origin }}</li>
+        <li>Para: {{ flight.destination }}</li>
+        <li>Duração: {{ flight.duration}} hora(s)</li>
+    </ul>
+
+    <h2>Lista de Passageiros</h2>
+    <ul>
+        {% for passenger in passengers %}
+            <li>{{ passenger.name }}</li>
+        {% else %}
+        <a href="{{ url_for('index') }}"><li>Sem  passageiros(garanta já o seu  Voo) </li></a>
+           
+                
+             
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+{% block footer %}
+VooBras: Desde 2023 te levando as alturas
+{% endblock %}
+

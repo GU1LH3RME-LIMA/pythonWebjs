@@ -1,0 +1,24 @@
+h1{
+    background-color: rgb(89, 89, 211);
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2{
+    border: 2px solid black;
+    font-size: 18px;
+    
+    
+    
+    color: red;
+
+}
+
+.button{
+    background-color: rgb(210, 247, 47);
+    
+    
+}
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linguagens</title>
+        <style>
+            h1{
+                background-color: rgb(89, 89, 211);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Linguagens Aprendidas</h1>
+        <ul>
+            {%for i in prog%}
+                <li><h2>{{i}}</h2></li>
+            {%endfor%}
+        </ul>
+        <a href="{{url_for('proxi')}}">Habilidades</a>
+
+    </body>
+
+
+
+</html>

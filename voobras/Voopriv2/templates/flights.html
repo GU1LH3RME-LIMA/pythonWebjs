@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}VOOs{% endblock %}
+{% block body %}
+    <h1>Todos os VOOs</h1>
+
+    <ul>
+        {% for flight in flights %}
+            <li>
+                <a href="{{ url_for('flight', flight_id=flight.id) }}">
+                   de {{ flight.origin }} para {{ flight.destination }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+{% block footer %}
+VooBras: Desde 2023 te levando as alturas
+{% endblock %}

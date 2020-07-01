@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linguagens</title>
+        <style>
+            h1{
+                background-color:rgb(238, 255, 0);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Habilidades</h1>
+        <ul>
+            {%for j in hab%}
+                <li><h2>{{j}}</h2></li>
+            {%endfor%}
+        </ul>
+        <a href="{{url_for('index')}}">Linguagens de Programação</a>
+
+    </body>
+
+
+
+</html>

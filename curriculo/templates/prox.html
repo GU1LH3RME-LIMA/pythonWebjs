@@ -1,0 +1,23 @@
+{%extends "layout.html" %}
+
+{%block heading%}
+    Habilidades
+{%endblock%}
+
+
+{% block body %}
+    <ul>
+    {%for j in hab %}
+        <h2><li>{{j}}</li></h2>
+    {%endfor%}
+    </ul>
+        </br>
+    <form action="{{ url_for('proxi') }}" method="post">
+        <input type="text" name="hab" placeholder="Coloque a Habilidade">
+        <button>Enviar</button>
+    </form>
+    </br>
+    <button><a href="{{url_for('curri')}}"><h2>Linguagens de Programação</h2></a></button>
+    
+    
+{% endblock %}

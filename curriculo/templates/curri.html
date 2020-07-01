@@ -1,0 +1,25 @@
+{%extends "layout.html" %}
+
+{%block heading%}
+    Linguagens de programação
+{%endblock%}
+
+
+{% block body %}
+    <ul>
+    {%for i in linguagens %}
+        <h2><li>{{i}}</li></h2>
+    {%endfor%}
+    </ul>
+        </br>
+    <form action="{{ url_for('curri') }}" method="post">
+        <input type="text" name="lingua" placeholder="Coloque a linguagem">
+        <button>Enviar</button>
+    </form>
+    </br>
+    
+    <button class="button"><a href="{{url_for('proxi')}}">Habilidades</a></button>
+    
+    
+{% endblock %}
+

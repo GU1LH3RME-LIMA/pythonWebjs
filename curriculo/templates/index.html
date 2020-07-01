@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Envio
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('curri') }}" method="post">
+        <input type="text" name="lingua" placeholder="Coloque as linguagens">
+        <button>Enviar</button>
+    </form>
+{% endblock %}
